@@ -1,0 +1,1134 @@
+@font-face {
+  font-family: 'open_sansbold';
+  src: url("../fonts/opensans-bold-webfont.woff2") format("woff2"), url("../fonts/opensans-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sanslight';
+  src: url("../fonts/opensans-light-webfont.woff2") format("woff2"), url("../fonts/opensans-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sansregular';
+  src: url("../fonts/opensans-regular-webfont.woff2") format("woff2"), url("../fonts/opensans-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sanssemibold';
+  src: url("../fonts/opensans-semibold-webfont.woff2") format("woff2"), url("../fonts/opensans-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'garamond_regular';
+  src: url("../fonts/ebgaramondsc12-regular-webfont.eot");
+  src: url("../fonts/ebgaramondsc12-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ebgaramondsc12-regular-webfont.woff") format("woff"), url("../fonts/ebgaramondsc12-regular-webfont.ttf") format("truetype"), url("../fonts/ebgaramondsc12-regular-webfont.svg#eb_garamond_sc12_regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+/* line 6, E:/TRAVAUX/CV/assets/scss/vendor/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, svg {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 27, E:/TRAVAUX/CV/assets/scss/vendor/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, svg {
+  display: block;
+}
+
+/* line 31, E:/TRAVAUX/CV/assets/scss/vendor/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 34, E:/TRAVAUX/CV/assets/scss/vendor/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 37, E:/TRAVAUX/CV/assets/scss/vendor/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 40, E:/TRAVAUX/CV/assets/scss/vendor/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 45, E:/TRAVAUX/CV/assets/scss/vendor/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 49, E:/TRAVAUX/CV/assets/scss/vendor/_reset.scss */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* line 59, E:/TRAVAUX/CV/assets/scss/vendor/_reset.scss */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 1, E:/TRAVAUX/CV/assets/scss/helpers/_btn.scss */
+.btn {
+  background-image: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin-bottom: 0;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-size: 2vw;
+  cursor: pointer;
+  border-radius: 0;
+  background-clip: border-box;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+/* line 16, E:/TRAVAUX/CV/assets/scss/helpers/_btn.scss */
+.btn-submit {
+  background: transparent;
+  border: 1px solid #8f8f8f;
+  font-size: 18px;
+  font-family: 'open_sanslight', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  width: 460px;
+  padding: 20px;
+  margin: 20px auto 0;
+}
+
+/* line 27, E:/TRAVAUX/CV/assets/scss/helpers/_btn.scss */
+.btn-submit:hover {
+  background: #fff;
+  border: 1px solid #fff;
+  color: #000;
+}
+
+@media (max-width: 767px) {
+  /* line 16, E:/TRAVAUX/CV/assets/scss/helpers/_btn.scss */
+  .btn-submit {
+    width: 100%;
+  }
+}
+
+/* line 1, E:/TRAVAUX/CV/assets/scss/helpers/_icone.scss */
+.icon {
+  display: inline-block;
+  line-height: 1;
+  position: relative;
+  vertical-align: middle;
+  @inlude transition(all 0.2s ease);
+}
+
+/* line 9, E:/TRAVAUX/CV/assets/scss/helpers/_icone.scss */
+.icon-arrow-bot {
+  background: url(../img/icon-arrow-bottom.svg) center center/15px 30px no-repeat;
+  width: 15px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* line 16, E:/TRAVAUX/CV/assets/scss/helpers/_icone.scss */
+.icon-exp-pro {
+  background: url(../img/icone-experiences-pro.svg) center center/55px 55px no-repeat;
+  width: 55px;
+  height: 55px;
+}
+
+/* line 22, E:/TRAVAUX/CV/assets/scss/helpers/_icone.scss */
+.icon-contact {
+  background: url(../img/icone-contact.svg) center center/55px 55px no-repeat;
+  width: 55px;
+  height: 55px;
+}
+
+/* line 28, E:/TRAVAUX/CV/assets/scss/helpers/_icone.scss */
+.icon-training {
+  background: url(../img/icone-formation.svg) center center/55px 55px no-repeat;
+  width: 55px;
+  height: 55px;
+}
+
+/* line 34, E:/TRAVAUX/CV/assets/scss/helpers/_icone.scss */
+.icon-skills {
+  background: url(../img/icone-competences.svg) center center/55px 55px no-repeat;
+  width: 55px;
+  height: 55px;
+}
+
+/* line 1, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 5, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.main-container {
+  overflow: hidden;
+}
+
+/* line 9, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  line-height: normal;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 75px 50px 75px 100px;
+  letter-spacing: 1vw;
+}
+
+/* line 17, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.h2 .txt {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 21, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.h2 .icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* line 29, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+p,
+li {
+  font-size: 1.2rem;
+  font-family: 'Cardo', serif;
+  margin-bottom: 20px;
+  font-family: 'Cardo', serif;
+  line-height: 1.5rem;
+}
+
+/* line 38, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 44, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+input,
+textarea {
+  outline: none;
+}
+
+/* line 49, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.container {
+  margin: 0 auto;
+}
+
+@media (min-width: 1367px) {
+  /* line 49, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+  .container {
+    width: 980px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1366px) {
+  /* line 49, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+  .container {
+    width: 900px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* line 49, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 49, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+  .container {
+    width: 80%;
+  }
+}
+
+/* line 65, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  -webkit-transition: background-position 0.5s ease;
+  -moz-transition: background-position 0.5s ease;
+  -o-transition: background-position 0.5s ease;
+  transition: background-position 0.5s ease;
+  min-height: calc(100vh - 150px);
+}
+
+@media (max-width: 767px) {
+  /* line 65, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+  .section {
+    min-height: calc(100vh - 100px);
+  }
+}
+
+/* line 73, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.section .h2 {
+  position: relative;
+  z-index: 2;
+}
+
+/* line 77, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.section.black {
+  background: #f5f5f5;
+}
+
+/* line 79, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.section.black .h2 {
+  color: #000;
+}
+
+/* line 82, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.section.black p {
+  color: #000;
+}
+
+/* line 86, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.section.white {
+  background: #fff;
+}
+
+/* line 88, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.section.white .h2 {
+  color: #000;
+}
+
+/* line 91, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.section.white p {
+  color: #000;
+}
+
+/* line 95, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.section.home {
+  position: relative;
+  background: url(../img/bg-modile.png) center center/cover no-repeat;
+}
+
+@media (min-width: 768px) {
+  /* line 95, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+  .section.home {
+    background: transparent;
+  }
+}
+
+/* line 101, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.section.home .h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-transform: uppercase;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 0.1em;
+  line-height: normal;
+  font-family: 'Montserrat', sans-serif;
+  padding: 4vw 8vw;
+  border: 5px solid #fff;
+}
+
+@media (max-width: 767px) {
+  /* line 101, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+  .section.home .h1 {
+    font-size: 24px;
+  }
+}
+
+/* line 118, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.section.home .h1 .bold {
+  font-weight: 700;
+}
+
+/* line 122, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.section.home .h2 {
+  font-family: 'Cardo', serif;
+  color: #fff;
+  text-transform: none;
+  letter-spacing: normal;
+  padding: 0;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 767px) {
+  /* line 122, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+  .section.home .h2 {
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/* line 139, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.section.contact {
+  height: auto;
+  min-height: auto;
+}
+
+/* line 143, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.section .section-title {
+  margin-bottom: 75px;
+  display: inline-block;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  /* line 147, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+  .section .section-title .h2 {
+    padding: 0;
+    padding-left: 75px;
+    font-size: 22px;
+  }
+}
+
+/* line 154, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.section .section-title .title-anim {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  position: absolute;
+  top: 50%;
+  left: -100px;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  height: 250px;
+  width: 250px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@media (max-width: 767px) {
+  /* line 154, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+  .section .section-title .title-anim {
+    width: 150px;
+    height: 150px;
+    left: -50px;
+  }
+}
+
+/* line 175, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.tools-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+/* line 179, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.tools-list li:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0 5px 10px;
+  border-color: transparent transparent transparent #f56b82;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+
+/* line 194, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.container-decoupe {
+  position: relative;
+  height: 100px;
+  top: 2px;
+}
+
+@media (max-width: 767px) {
+  /* line 194, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+  .container-decoupe {
+    height: 60px;
+  }
+}
+
+/* line 201, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.container-decoupe svg {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 205, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.container-decoupe.bot {
+  top: -2px;
+}
+
+/* line 208, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.container-decoupe .icon {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  z-index: 3;
+  opacity: 0;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+/* line 215, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.container-decoupe .icon.anim {
+  -webkit-animation: icon_anim .3s forwards 1s;
+  -moz-animation: icon_anim .3s forwards 1s;
+  -ms-animation: icon_anim .3s forwards 1s;
+  -o-animation: icon_anim .3s forwards 1s;
+  animation: icon_anim .3s forwards 1s;
+}
+
+/* line 223, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.container-decoupe.decoupe-home {
+  margin-top: -100px;
+}
+
+@media (max-width: 767px) {
+  /* line 223, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+  .container-decoupe.decoupe-home {
+    margin-top: -60px;
+  }
+}
+
+/* line 229, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.container-decoupe .decoupe-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 238, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.container-decoupe .decoupe-triangle {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 150px;
+  height: 75px;
+}
+
+@media (max-width: 767px) {
+  /* line 238, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+  .container-decoupe .decoupe-triangle {
+    top: 25%;
+  }
+}
+
+/* line 248, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.container-decoupe .decoupe-triangle.bot {
+  cursor: pointer;
+}
+
+/* line 251, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.container-decoupe .decoupe-triangle.top {
+  top: 10%;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  /* line 251, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+  .container-decoupe .decoupe-triangle.top {
+    top: -27%;
+  }
+}
+
+/* line 261, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.nav {
+  display: none;
+}
+
+/* line 263, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.nav.active {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  text-transform: uppercase;
+  display: block;
+}
+
+/* line 272, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.nav .main-nav {
+  z-index: 2;
+  position: relative;
+}
+
+/* line 275, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.nav .main-nav li {
+  text-align: center;
+}
+
+/* line 279, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.nav .main-nav li:hover a, .nav .main-nav li.active a {
+  text-decoration: underline;
+}
+
+/* line 284, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.nav .main-nav a {
+  color: #fff;
+  font-size: 4vw;
+  font-family: 'Cardo', serif;
+  text-transform: capitalize;
+  position: relative;
+  -webkit-transform: translateX(-100px);
+  -ms-transform: translateX(-100px);
+  transform: translateX(-100px);
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  opacity: 0;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* line 295, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.nav .main-nav a.open {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+/* line 301, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.nav .sub-nav {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* line 309, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.nav .sub-nav li {
+  font-size: 20vw;
+  color: rgba(7, 105, 234, 0.23);
+  font-family: 'open_sansbold';
+  text-align: center;
+  white-space: nowrap;
+  display: none;
+  line-height: 100vh;
+}
+
+/* line 321, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.container-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 10;
+  display: none;
+}
+
+/* line 331, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.burger-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  z-index: 9;
+}
+
+/* line 338, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.burger-container.active {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 342, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.burger-container .burger {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 345, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.burger-container .burger .hover {
+  cursor: pointer;
+}
+
+@-webkit-keyframes icon_anim {
+  0% {
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(-50%, 50%);
+    -ms-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes icon_anim {
+  0% {
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(-50%, 50%);
+    -ms-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
+    opacity: 1;
+  }
+}
+
+@-o-keyframes icon_anim {
+  0% {
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(-50%, 50%);
+    -ms-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
+    opacity: 1;
+  }
+}
+
+@keyframes blik_opacity {
+  0% {
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(-50%, 50%);
+    -ms-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
+    opacity: 1;
+  }
+}
+
+/* line 396, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.container-portfolio-items .portfolio-item {
+  display: block;
+  height: 70vh;
+  line-height: 70vh;
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  /* line 396, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+  .container-portfolio-items .portfolio-item {
+    height: auto;
+    line-height: normal;
+    position: relative;
+    margin-top: 50px;
+  }
+}
+
+/* line 407, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.container-portfolio-items .portfolio-item .ct-img {
+  width: 63%;
+  position: relative;
+}
+
+/* line 410, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.container-portfolio-items .portfolio-item .ct-img .ct-overlay {
+  line-height: normal;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 78%;
+}
+
+/* line 417, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.container-portfolio-items .portfolio-item .ct-img .ct-overlay video {
+  width: 100%;
+}
+
+/* line 421, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.container-portfolio-items .portfolio-item .ct-img img {
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  /* line 407, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+  .container-portfolio-items .portfolio-item .ct-img {
+    margin-top: 120px;
+  }
+}
+
+/* line 428, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.container-portfolio-items .portfolio-item .ct-txt {
+  width: 29%;
+  line-height: normal;
+  padding: 30px;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  /* line 428, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+  .container-portfolio-items .portfolio-item .ct-txt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+  }
+}
+
+/* line 439, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.container-portfolio-items .portfolio-item .ct-txt div {
+  line-height: normal;
+  text-decoration: none;
+  color: #f56b82;
+  font-family: 'Montserrat', sans-serif;
+  display: block;
+  font-weight: 300;
+}
+
+/* line 446, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.container-portfolio-items .portfolio-item .ct-txt div .bold {
+  font-weight: 700;
+}
+
+/* line 449, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.container-portfolio-items .portfolio-item .ct-txt div > span {
+  position: relative;
+  z-index: 2;
+}
+
+/* line 452, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.container-portfolio-items .portfolio-item .ct-txt div > span:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0px 0px 0px;
+  border-color: transparent transparent rgba(226, 96, 96, 0.3);
+  position: absolute;
+  left: 50%;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  top: 50%;
+  z-index: 1;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* line 467, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.container-portfolio-items .portfolio-item .ct-txt div > span:hover:after {
+  border-width: 0 50px 70px 50px;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+  -ms-transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* line 475, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.container-portfolio-items .portfolio-item .ct-txt:nth-child(odd) {
+  text-align: left;
+}
+
+@media (max-width: 767px) {
+  /* line 475, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+  .container-portfolio-items .portfolio-item .ct-txt:nth-child(odd) {
+    text-align: center;
+  }
+}
+
+/* line 481, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.container-portfolio-items .portfolio-item .ct-txt:nth-child(even) {
+  text-align: right;
+}
+
+@media (max-width: 767px) {
+  /* line 481, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+  .container-portfolio-items .portfolio-item .ct-txt:nth-child(even) {
+    text-align: center;
+  }
+}
+
+/* line 488, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.container-portfolio-items .portfolio-item .ct-img,
+.container-portfolio-items .portfolio-item .ct-txt {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@media (max-width: 767px) {
+  /* line 488, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+  .container-portfolio-items .portfolio-item .ct-img,
+  .container-portfolio-items .portfolio-item .ct-txt {
+    width: 100%;
+  }
+}
+
+/* line 498, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.container-portfolio-items .dec {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 504, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.container-portfolio-items .burger-bar,
+.container-portfolio-items .burger-bar rect {
+  cursor: pointer;
+}
+
+/* line 511, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.ct-hidden {
+  display: none;
+}
+
+/* line 513, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.ct-hidden .portfolio-item {
+  opacity: 0;
+}
+
+/* line 516, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.ct-hidden .right {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+/* line 519, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.ct-hidden .left {
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+/* line 522, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.ct-hidden .left,
+.ct-hidden .right {
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+/* line 525, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.ct-hidden .left.active,
+.ct-hidden .right.active {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+/* line 532, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+#renderCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+@media (min-width: 768px) {
+  /* line 532, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+  #renderCanvas {
+    display: block;
+  }
+}
+
+/* line 548, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+#diana-wheel {
+  width: 90vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 768px) {
+  /* line 548, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+  #diana-wheel {
+    width: 70vw;
+  }
+}
+
+@media (min-width: 1025px) {
+  /* line 548, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+  #diana-wheel {
+    width: 50vw;
+  }
+}
+
+/* line 562, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.list-container {
+  display: none;
+}
+
+/* line 566, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.groupe_sub_path text {
+  text-transform: uppercase;
+}
+
+/* line 570, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.groupe_sub_path .first-elem,
+.groupe_sub_path .second-elem {
+  font-size: 1vw;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* line 576, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.group_main_path .first-elem {
+  font-size: 1.5vw;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* line 582, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.group_main_path .second-elem {
+  font-size: 1.3vw;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* line 587, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.list-container {
+  display: none;
+}
+
+/* line 591, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.main-pool {
+  display: flex;
+}
+
+/* line 595, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.ct-canvas {
+  width: calc(100% - 300px);
+  height: 100vh;
+}
+
+/* line 600, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.ct-filters {
+  width: 300px;
+  height: 100vh;
+  box-shadow: 9px 0px 120px 20px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  position: relative;
+  padding: 20px;
+  overflow-y: auto;
+  background: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* line 612, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.label-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* line 619, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.input {
+  display: block;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+/* line 623, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.input label {
+  cursor: pointer;
+}
+
+/* line 628, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.form-row {
+  margin-bottom: 20px;
+}
+
+/* line 633, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+.pool-size input {
+  width: 50px;
+}
+
+/* line 638, E:/TRAVAUX/CV/assets/scss/pages/_comon.scss */
+#renderPoolCanvas {
+  width: 100%;
+  height: 100%;
+}
+
+/*# sourceMappingURL=../css/style.map */

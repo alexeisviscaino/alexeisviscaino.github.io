@@ -1,0 +1,38 @@
+.icon {
+    display: inline-block;
+    line-height: 1;
+    position: relative;
+    vertical-align: middle;
+    @inlude transition(all 0.2s ease);
+}
+
+.icon-arrow-bot {
+    background: url(../img/icon-arrow-bottom.svg) center center/15px 30px no-repeat;
+    width: 15px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.icon-exp-pro {
+    background: url(../img/icone-experiences-pro.svg) center center/55px 55px no-repeat;
+    width: 55px;
+    height: 55px;
+}
+
+.icon-contact {
+    background: url(../img/icone-contact.svg) center center/55px 55px no-repeat;
+    width: 55px;
+    height: 55px;
+}
+
+.icon-training {
+    background: url(../img/icone-formation.svg) center center/55px 55px no-repeat;
+    width: 55px;
+    height: 55px;
+}
+
+.icon-skills {
+    background: url(../img/icone-competences.svg) center center/55px 55px no-repeat;
+width: 55px;
+    height: 55px;
+}

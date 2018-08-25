@@ -1,0 +1,35 @@
+.btn {
+    background-image: none;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 0;
+    vertical-align: middle;
+    white-space: nowrap;
+    font-size: 2vw;
+    cursor: pointer;
+    border-radius: 0;
+    background-clip: border-box;
+    @include transition(all 0.2s ease);
+}
+
+.btn-submit {
+    background: transparent;
+    border: 1px solid #8f8f8f;
+    font-size: 18px;
+    font-family: 'open_sanslight', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    width: 460px;
+    padding: 20px;
+    margin: 20px auto 0;
+    &:hover {
+        background: #fff;
+        border: 1px solid #fff;
+        color: #000;
+    }
+    @media (max-width: 767px) {
+        width: 100%;
+    }
+}

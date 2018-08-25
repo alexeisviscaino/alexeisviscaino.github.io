@@ -1,0 +1,238 @@
+@mixin animation($value...) {
+    @include prefix((animation: $value));
+}
+
+@mixin background-size($value) {
+    @include prefix((background-size: $value));
+}
+
+@mixin border-radius($radius...) {
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+    background-clip: padding-box;
+}
+
+@mixin border-top-radius($radius) {
+    -webkit-border-top-right-radius: $radius;
+    border-top-right-radius: $radius;
+    -webkit-border-top-left-radius: $radius;
+    border-top-left-radius: $radius;
+    background-clip: padding-box;
+}
+
+@mixin border-right-radius($radius) {
+    -webkit-border-bottom-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+    -webkit-border-top-right-radius: $radius;
+    border-top-right-radius: $radius;
+    background-clip: padding-box;
+}
+
+@mixin border-bottom-radius($radius) {
+    -webkit-border-bottom-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+    -webkit-border-bottom-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+    background-clip: padding-box;
+}
+
+@mixin border-left-radius($radius) {
+    -webkit-border-bottom-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+    -webkit-border-top-left-radius: $radius;
+    border-top-left-radius: $radius;
+    background-clip: padding-box;
+}
+
+@mixin box-shadow($value...) {
+    @include prefix((box-shadow: $value), webkit moz);
+}
+
+@mixin box-sizing($value) {
+    @include prefix((box-sizing: $value), webkit moz);
+}
+
+@mixin breakpoint($name) {
+    @if map-has-key($breakpoints, $name) {
+        @media #{inspect(map-get($breakpoints, $name))} {
+            @content;
+        }
+    }
+    @else {
+        @warn "Couldn't find a breakpoint named `#{$name}`.";
+    }
+}
+
+@mixin calc($property, $expression) {
+    #{$property}: -webkit-calc(#{$expression});
+    #{$property}: calc(#{$expression});
+}
+
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin keyframe( $animationName )
+{
+    @-webkit-keyframes $animationName {
+        @content;
+    }
+    @-moz-keyframes $animationName {
+        @content;
+    }
+    @-o-keyframes $animationName {
+        @content;
+    }
+    @keyframes $animationName {
+        @content;
+    }
+}
+
+@mixin linear-gradient($from, $to) {
+    background-color: $to;
+    background-image: -moz-linear-gradient($from, $to);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $from), color-stop(1, $to));
+    background-image: -webkit-linear-gradient($from, $to);
+    background-image: -o-linear-gradient($from, $to);
+    background-image: linear-gradient($from, $to);
+}
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content
+    }
+    &:-moz-placeholder {
+        @content
+    }
+    &::-moz-placeholder {
+        @content
+    }
+    &:-ms-input-placeholder {
+        @content
+    }
+    &::-ms-input-placeholder {
+        @content
+    }
+    &::placeholder {
+        @content
+    }
+}
+
+@mixin prefix($map, $vendors: webkit moz ms o) {
+    @each $prop,
+    $value in $map {
+        @if $vendors {
+            @each $vendor in $vendors {
+                #{"-" + $vendor + "-" + $prop}: #{$value};
+            }
+        }
+        // Dump regular property anyway
+        #{$prop}: #{$value};
+    }
+}
+
+@mixin size($width, $height:$width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin transition($value...) {
+    @include prefix((transition: $value), webkit moz o);
+}
+
+@mixin transition-duration($value...) {
+    @include prefix((transition-duration: $value), webkit moz o);
+}
+
+@mixin transition-property($value...) {
+    @include prefix((transition-property: $value), webkit moz o);
+}
+
+@mixin transition-timing-function($value...) {
+    @include prefix((transition-timing-function: $value), webkit moz o);
+}
+
+@mixin transform($value...) {
+    @include prefix((transform: $value), webkit ms);
+}
+
+@mixin carrefour-color($color, $color-name) {
+    .h1,
+    .offer .h3,
+    .actuality-main-container .container-title p,
+    .actuality-main-container .article-title,
+    .title-product-list {
+        color: $color;
+    }
+    .selector,
+    .nav-second-list li a,
+    .search-header,
+    .search-option li:hover,
+    .carrefour-search button:hover,
+    .carrefour-search .option li:hover {
+        background: $color;
+    }
+    .nav-second-list li a:hover,
+    .nav-second-list li a.active {
+        background: #fff;
+        color: $color;
+    }
+    .container-megamenu li a {
+        background: none;
+    }
+    .search-header:before {
+        border-color: $color transparent transparent transparent;
+    }
+    .actuality-main-container .container-title p:after {
+        background: $color;
+    }
+    .offer-bouteilles {
+        background-image: url('../image/offre-bouteilles-#{$color-name}.png');
+    }
+    .offer-flacons {
+        background-image: url('../image/offre-flacons-#{$color-name}.png');
+    }
+    .offer-bidons {
+        background-image: url('../image/offre-bidons-#{$color-name}.png');
+    }
+    .offer-boites {
+        background-image: url('../image/offre-boites-#{$color-name}.png');
+    }
+    .offer-bouchons {
+        background-image: url('../image/offre-bouchons-#{$color-name}.png');
+    }
+    .offer-pots {
+        background-image: url('../image/offre-pots-#{$color-name}.png');
+    }
+    .offer-piluliers {
+        background-image: url('../image/offre-piluliers-#{$color-name}.png');
+    }
+    .offer-couvercles {
+        background-image: url('../image/offre-couvercles-#{$color-name}.png');
+    }
+    .offer-sprays {
+        background-image: url('../image/offre-sprays-#{$color-name}.png');
+    }
+}
