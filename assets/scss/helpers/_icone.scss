@@ -3,13 +3,20 @@
     line-height: 1;
     position: relative;
     vertical-align: middle;
-    @inlude transition(all 0.2s ease);
+    transition: all 0.2s ease;
 }
 
 .icon-arrow-bot {
     background: url(../img/icon-arrow-bottom.svg) center center/15px 30px no-repeat;
     width: 15px;
     height: 30px;
+    cursor: pointer;
+}
+
+.icon-arrow-right {
+    background: url(../img/icon-arrow-right-blue.svg) center center/30px 15px no-repeat;
+    width: 30px;
+    height: 15px;
     cursor: pointer;
 }
 

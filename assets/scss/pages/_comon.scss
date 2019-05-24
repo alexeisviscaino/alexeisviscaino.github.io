@@ -243,7 +243,7 @@ textarea {
         width: 150px;
         height: 75px;
         @media (max-width: 767px) {
-            top: 25%;
+            top: 18%;
         }
         &.bot {
             cursor: pointer;
@@ -430,6 +430,11 @@ textarea {
             line-height: normal;
             padding: 30px;
             position: relative;
+            &:hover{
+                .icon-arrow-right{
+                    transform: translateX(20px);
+                }
+            }
             @media(max-width: 767px) {
                 position: absolute;
                 top: 0;
@@ -441,7 +446,9 @@ textarea {
                 text-decoration: none;
                 color: $main-color;
                 font-family: 'Montserrat', sans-serif;
-                display: block;
+                display: inline-block;
+                width: calc(100% - 35px);
+                vertical-align: middle;
                 font-weight: 300;
                 .bold {
                     font-weight: 700;
@@ -607,6 +614,10 @@ textarea {
     overflow-y: auto;
     background: #fff;
     font-family: 'Montserrat', sans-serif;
+    .h1{
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
 }
 
 .label-title {
