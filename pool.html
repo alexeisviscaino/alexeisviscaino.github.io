@@ -11,115 +11,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
     <link href="https://fonts.googleapis.com/css?family=Cardo|Montserrat:300,400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <style>
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+            touch-action: none;
+        }
+        html,
+        body {
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          font-family: sans-serif;
+          font-size: 14px;
+          line-height: 1.3333333;
+          color: #212121;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="main-pool">
+    <div class="main" id="app">
         <div class="ct-filters">
-            <div class="form-row input-shape">
-                <p class="label-title">Forme :</p>
-
-                <div class="input">
-                    <input type="radio" name="shape" id="rond" value="rond">
-                    <label for="rond">Rond</label>
-                </div>
-
-                <div class="input">
-                    <input type="radio" name="shape" id="rectangle" value="rectangle" checked="checked">
-                    <label for="rectangle">Rectangle</label>
-                </div>
-            </div>
-            <div class="form-row input-color">
-                <p class="label-title">Couleur :</p>
-
-                <div class="input">
-                    <input type="radio" name="couleur" id="poolMatWhite" value="poolMatWhite" >
-                    <label for="poolMatWhite">Blanc</label>
-                </div>
-
-                <div class="input">
-                    <input type="radio" name="couleur" id="poolMatBeige" value="poolMatBeige">
-                    <label for="poolMatBeige">Beige</label>
-                </div>
-
-                <div class="input">
-                    <input type="radio" name="couleur" id="poolMatBlue" value="poolMatBlue" checked="checked">
-                    <label for="poolMatBlue">Bleu clair</label>
-                </div>
-
-                <div class="input">
-                    <input type="radio" name="couleur" id="poolMatMosaic" value="poolMatMosaic">
-                    <label for="poolMatMosaic">Mozaïque</label>
-                </div>
-
-                <div class="input">
-                    <input type="radio" name="couleur" id="poolMatGrey" value="poolMatGrey">
-                    <label for="poolMatGrey">Gris acier</label>
-                </div>
-
-                <div class="input">
-                    <input type="radio" name="couleur" id="poolMatGreen" value="poolMatGreen">
-                    <label for="poolMatGreen">Vert</label>
-                </div>
-            </div>
-            <div class="form-row input-size">
-                <p class="label-title">Taille :</p>
-
-                <div class="input pool-size longueur">
-                    <input type="number" name="longueur" id="longueur" value="5" min="2" max="15">
-                    <label for="longueur">Longueur</label>
-                </div>
-
-                <div class="input pool-size largeur">
-                    <input type="number" name="largeur" id="largeur" value="3" min="1" max="15">
-                    <label for="largeur">Largeur</label>
-                </div>
-
-                <div class="input pool-size profondeur">
-                    <input type="number" name="profondeur" id="profondeur" value="2" min="1">
-                    <label for="profondeur">Profondeur</label>
-                </div>
-            </div>
-            <div class="form-row input-staircase">
-                <p class="label-title">Escalier :</p>
-
-                <div class="input">
-                    <input type="radio" name="staircase" id="staircase-oui" value="oui" checked="checked">
-                    <label for="staircase-oui">Oui</label>
-                </div>
-
-                <div class="input">
-                    <input type="radio" name="staircase" id="staircase-non" value="non">
-                    <label for="staircase-non">Non</label>
-                </div>
-            </div>
-            <div class="form-row input-water">
-                <p class="label-title">Eau :</p>
-
-                <div class="input">
-                    <input type="radio" name="water" id="water-oui" value="oui" checked="checked">
-                    <label for="water-oui">Oui</label>
-                </div>
-
-                <div class="input">
-                    <input type="radio" name="water" id="water-non" value="non">
-                    <label for="water-non">Non</label>
-                </div>
-            </div>
+            <h1 class="h1" @click="say('hi')">{{message}}</h1>
+            <radio-btn-item name="shape"  id="rond" value="rond" value2="rectangle" id2="rectangle" title="Forme"></radio-btn-item>
+            <radio-btn-color name="color" title="Couleur" id="poolMatWhite" id2="poolMatBeige" id3="poolMatBlue" id4="poolMatMosaic" id5="poolMatGrey" id6="poolMatGreen" ></radio-btn-color>
+            <input-btn-size title="Taille" length="longueur" width="largeur" depth="profondeur"></input-btn-size>
+            <radio-btn-item name="staircase" id="staircase-oui" id2="staircase-non" title="Escalier" value="oui" value2="non" checked="true"></radio-btn-item>
+            <radio-btn-item name="water" id="water-oui" id2="water-non" title="Eau" value="oui" value2="non" checked="true"></radio-btn-item>
+            <radio-btn-item name="scenery" id="scenery-oui" id2="scenery-non" title="Paysage" value="oui" value2="non" checked="true"></radio-btn-item>
+            <radio-btn-item name="textures" id="textures-oui" id2="textures-non" title="Textures" value="oui" value2="non"></radio-btn-item>
         </div>
         <div class="ct-canvas">
-            <canvas id="renderPoolCanvas"></canvas>
+            <canvas id="renderCanvas"></canvas>
         </div>
     </div>
-    <script type="text/javascript" src="./assets/js/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="./assets/js/babylon.custom.js"></script>
+    <script type="text/javascript" src="./assets/js/jquery.pep.js"></script>
+    <script type="text/javascript" src="./assets/js/babylon.js"></script>
     <script type="text/javascript" src="./assets/js/babylon.waterMaterial.js"></script>
+    <script type="text/javascript" src="./assets/js/babylon.objFileLoader.min.js"></script>
+    <script type="text/javascript" src="./assets/js/vue.js"></script>
     <script type="text/javascript" src="./assets/js/pool.js"></script>
-    <script type="text/javascript">
-        window.addEventListener("DOMContentLoaded", function() {
-            BjsApp.init();
-        });
-    </script>
 </body>
 
 </html>
