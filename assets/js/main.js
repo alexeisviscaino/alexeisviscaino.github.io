@@ -26,48 +26,48 @@ $(window).on("load", function () {
         triangle_lit_1 = s_1.polygon().attr({
             points: [t1, t2, t3, t4, t5, t6],
             strokeWidth: 0,
-            fill: "#f56b82",
+            fill: "#002fa7",
             "fill-opacity": "0.5",
             "id": "lit-1"
         }),
         triangle_big_1 = s_1.polygon().attr({
             points: [t1, t2, t3, t4, t5, t6],
             strokeWidth: 1,
-            stroke: "#f56b82",
+            stroke: "#002fa7",
             fill: "transparent",
             "id": "big-1"
         }),
         triangle_lit_2 = s_2.polygon().attr({
             points: [t1, t2, t3, t4, t5, t6],
             strokeWidth: 0,
-            fill: "#f56b82",
+            fill: "#002fa7",
             "fill-opacity": "0.5",
             "id": "lit-2"
         }),
         triangle_big_2 = s_2.polygon().attr({
             points: [t1, t2, t3, t4, t5, t6],
             strokeWidth: 1,
-            stroke: "#f56b82",
+            stroke: "#002fa7",
             fill: "transparent",
             "id": "big-2"
         }),
         triangle_lit_3 = s_3.polygon().attr({
             points: [t1, t2, t3, t4, t5, t6],
             strokeWidth: 0,
-            fill: "#f56b82",
+            fill: "#002fa7",
             "fill-opacity": "0.5",
             "id": "lit-3"
         }),
         triangle_big_3 = s_3.polygon().attr({
             points: [t1, t2, t3, t4, t5, t6],
             strokeWidth: 1,
-            stroke: "#f56b82",
+            stroke: "#002fa7",
             fill: "transparent",
             "id": "big-3"
         }),
         polygon_arrow = d.polygon().attr({
             points: [0, 0, (decoup_triangle_w / 2), 0, decoup_triangle_w, 0],
-            fill: "#f56b82"
+            fill: "#002fa7"
         }),
         grabPathTriangles = Snap.selectAll('#big-1, #big-2, #big-3, #lit-1, #lit-2, #lit-3');
 
@@ -160,7 +160,7 @@ BjsApp.init = function () {
     light3.diffuse = new BABYLON.Color3(1, 0.53, 0.85);
     light.specular = new BABYLON.Color3(0, 0, 0);
 
-    scene.clearColor = new BABYLON.Color3(0.96, 0.42, 0.51);
+    scene.clearColor = new BABYLON.Color3(0, 0.18, 0.65);
 
     //MESH
 

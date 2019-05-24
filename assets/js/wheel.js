@@ -446,7 +446,7 @@ $(document).ready(function () {
                             class: "sub_path",
                             index: i + 1
                         });
-                        console.log(path_content_text);
+                        //console.log(path_content_text);
                         var this_text = s.multitext(text_cordinate_x, text_cordinate_y, path_content_text, " /n").attr({
                             id: i + 1,
                             "data-coord": j,
@@ -460,7 +460,7 @@ $(document).ready(function () {
                             index: (i + 1),
                             opacity: 0
                         });
-                        console.log(item_deg);
+                        //console.log(item_deg);
                         path_name.transform('r' + (item_deg - 36) + ',700,700');
                         window["groupe_sub_path_animate_" + (i + 1)] = s.group(path_name);
                         window["groupe_sub_path_" + (i + 1)] = s.group(this_text, image);
@@ -478,10 +478,10 @@ $(document).ready(function () {
                     setTimeout(function () {
 
                         sub_path_grp.each(function (i) { //-----FONCTION ANIMER SUB-PATH EN FONCTION DE L'ANGLE DU MAIN_PATH
-                            console.log(i);
+                            //console.log(i);
                             var index = $(this).attr("index"),
                                 radiant = parseInt(item_deg, 10) - (36 * parseInt(i + 1, 10));
-                            console.log(radiant);
+                            //console.log(radiant);
                             window["groupe_sub_path_animate_" + index].select("g path").animate({
                                 "fill-opacity": "1",
                                 fill: sub_path_color

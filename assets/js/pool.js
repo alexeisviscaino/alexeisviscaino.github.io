@@ -366,7 +366,7 @@ BjsApp.init = function () {
     };
 
     addRectangularPool(poolActualSizeX, poolActualSizeY, poolActualSizeZ);
-    console.log(pools);
+    //console.log(pools);
 
     // EQUADOR
 
@@ -391,7 +391,7 @@ BjsApp.init = function () {
     equador(poolActualSizeZ);
 
     //POST-PROCESS
-    console.log(scene.meshes);
+    //console.log(scene.meshes);
 
     //ENGINE RENDER
     engine.runRenderLoop(function () {

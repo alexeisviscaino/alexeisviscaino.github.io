@@ -182,7 +182,7 @@ textarea {
             height: 0;
             border-style: solid;
             border-width: 5px 0 5px 10px;
-            border-color: transparent transparent transparent $red;
+            border-color: transparent transparent transparent $main-color;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
@@ -439,7 +439,7 @@ textarea {
             div {
                 line-height: normal;
                 text-decoration: none;
-                color: $red;
+                color: $main-color;
                 font-family: 'Montserrat', sans-serif;
                 display: block;
                 font-weight: 300;
@@ -455,7 +455,7 @@ textarea {
                         height: 0;
                         border-style: solid;
                         border-width: 0 0px 0px 0px;
-                        border-color: transparent transparent rgba(226, 96, 96, 0.30);
+                        border-color: transparent transparent rgba(0, 47, 167, 0.3);
                         position: absolute;
                         left: 50%;
                         @include transition(all 0.2s ease);
