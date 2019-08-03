@@ -208,7 +208,7 @@ textarea {
     .icon {
         position: absolute;
         left: 50%;
-        top: 30%;
+        top: 0;
         z-index: 3;
         opacity: 0;
         @include transform(translate(-50%, 0));
@@ -235,18 +235,16 @@ textarea {
         height: 100%;
         width: 100%;
     }
-    .decoupe-triangle {
+    .event-scroll-arrow {
         position: absolute;
         top: 30%;
         left: 50%;
         @include transform(translateX(-50%));
         width: 150px;
         height: 75px;
+        cursor: pointer;
         @media (max-width: 767px) {
             top: 18%;
-        }
-        &.bot {
-            cursor: pointer;
         }
         &.top {
             top: 10%;

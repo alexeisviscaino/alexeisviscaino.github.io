@@ -1,4 +1,4 @@
-$(window).on("load", function () {
+window.addEventListener( 'load', function( event ) {
 
     //VARS
     var s_1 = Snap(".title-anim-1"),
@@ -8,12 +8,12 @@ $(window).on("load", function () {
         d = Snap(".decoupe-triangle.bot"),
         k = Snap(".hover-item"),
         l = Snap(".title-animation"),
-        decoup_triangle_w = $(".decoupe-triangle").width(),
-        decoup_triangle_h = $(".decoupe-triangle").height(),
-        decoup_width = $(".decoupe-header").width(),
-        decoup_height = $(".decoupe-header").height(),
-        title_width = $(".title-anim-2").width() - 10,
-        title_height = $(".title-anim-3").height() - 10,
+        decoup_triangle_w = document.querySelector(".decoupe-triangle").clientWidth,
+        decoup_triangle_h = document.querySelector(".decoupe-triangle").clientHeight,
+        decoup_width = document.querySelector(".decoupe-header").clientWidth,
+        decoup_height = document.querySelector(".decoupe-header").clientHeight,
+        title_width = document.querySelector(".title-anim-2").clientWidth - 10,
+        title_height = document.querySelector(".title-anim-3").clientHeight - 10,
         half_title_width = title_width / 2,
         half_title_height = title_height / 2,
         scroll_test = true,
@@ -104,7 +104,8 @@ $(window).on("load", function () {
     animation_triangle();
     setTimeout(function () {
         anim_arrow();
-        $(".icon-arrow-bot").addClass("anim");
+        arrow = document.querySelector(".icon-arrow-bot")
+        arrow.classList.add("anim")
     }, 400);
 
     //ANIMATION TRIANGLE TITLES
@@ -112,18 +113,18 @@ $(window).on("load", function () {
         animation_triangle();
     }, 3500);
 
-    $(".nav .main-nav a").on("click", function () {
-        var this_attr = $(this).attr("data-attr") - 1;
-        $(".sub-nav li").slideUp(700);
-        $(".sub-nav li").eq(this_attr).slideDown(700);
-    });
+    function scrollTo(element) {
+      window.scroll({
+        behavior: 'smooth',
+        left: 0,
+        top: element.offsetTop + 30
+      });
+    }
 
-    $("body").on("click", ".decoupe-triangle.bot, .icon-arrow-bot", function () {
-        var speed = 1000; // Durée de l'animation (en ms)
-        $('html, body').animate({
-            scrollTop: $("#portfolio").offset().top
-        }, speed, mina.ease);
-        return false;
+    var decIconArrowBot = document.querySelector(".event-scroll-arrow")
+
+    decIconArrowBot.addEventListener('click', function(){
+      scrollTo(document.getElementById("portfolio"));
     });
 
 });
@@ -135,10 +136,8 @@ BjsApp.init = function () {
     var engine = new BABYLON.Engine(canvas, true);
     var scene = new BABYLON.Scene(engine);
 
-    /*var camera = new BABYLON.ArcRotateCamera("Camera", 51, 1.20, 33, new BABYLON.Vector3(0, 0, 0), scene);*/
     var camera = new BABYLON.UniversalCamera("UniversalCamera", new BABYLON.Vector3(0, 0, -50), scene);
     scene.activeCameras.push(camera);
-    /*camera.attachControl(canvas);*/
 
     //UTIL FUNCTIONS
     var myPoints = [];
