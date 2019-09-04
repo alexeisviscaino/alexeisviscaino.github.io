@@ -94,7 +94,7 @@ textarea {
     }
     &.home {
         position: relative;
-        background: url(../img/bg-modile.png) center center / cover no-repeat;
+        background: url(../img/bg-mobile.png) center center / cover no-repeat;
         @media(min-width: 768px) {
             background: transparent;
         }
